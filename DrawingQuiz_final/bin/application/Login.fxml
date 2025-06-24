@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="wrap" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login_Controller">
+   <children>
+      <Button fx:id="btnCancel" layoutX="1260.0" layoutY="6.0" mnemonicParsing="false" onAction="#cancelLogin" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fx:id="Logo" layoutX="798.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Drawing Quiz" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="60.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="156.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/draw.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="7.0" prefHeight="800.0" prefWidth="750.0">
+         <children>
+            <Circle fill="#5b9bd5" layoutX="155.0" radius="80.0" stroke="#5b9bd5" strokeType="INSIDE" />
+            <Line endX="89.0" endY="14.0" layoutX="581.0" layoutY="92.0" startX="89.0" startY="-130.0" stroke="#70ad48" strokeLineCap="ROUND" strokeWidth="10.0" />
+            <Line endX="93.0" endY="18.5" layoutX="576.0" layoutY="88.0" startX="-83.0" startY="-100.0" stroke="#70ad48" strokeLineCap="ROUND" strokeWidth="10.0" />
+            <Circle fill="#ed7d31" layoutX="-16.0" layoutY="357.0" radius="30.0" stroke="#ffa81f" strokeType="INSIDE" />
+            <Circle fill="#ed7d31" layoutX="570.0" layoutY="812.0" radius="70.0" stroke="#ffa81f" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="-79.0" layoutY="693.0" stroke="#70ad48" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="10.0" width="248.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="LPANE" layoutX="790.0" layoutY="271.0" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="26.0" layoutY="212.0" prefHeight="23.0" prefWidth="356.0" style="-fx-font-size: 1.5em;" textFill="RED" />
+            <TextField fx:id="txtUserName" layoutX="25.0" layoutY="83.0" onKeyPressed="#Login2" prefHeight="35.0" prefWidth="350.0" promptText=" 아이디" style="-fx-font-size: 1.7em; -fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #44a3fc;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutX="25.0" layoutY="158.0" onKeyPressed="#Login2" prefHeight="35.0" prefWidth="350.0" promptText=" 비밀번호" style="-fx-background-color: transparent; -fx-border-color: #44a3fc; -fx-border-width: 0px 0px 1px 0px; -fx-font-size: 1.7em;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Button fx:id="btnLogin" layoutX="25.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="45.0" prefWidth="350.0" style="-fx-font-size: 1.7em; -fx-background-radius: 10px;" text="로그인" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMembership" graphicTextGap="10.0" layoutX="147.0" layoutY="327.0" mnemonicParsing="false" onAction="#Membership" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: transparent; -fx-font-size: 1.5em;" text="회원가입" textFill="#bfbdbd">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnFind" alignment="CENTER" layoutX="105.0" layoutY="362.0" mnemonicParsing="false" onAction="#FindMemBer" style="-fx-background-color: transparent; -fx-font-size: 1.5em;" text="아이디/비밀번호 찾기" textAlignment="CENTER" textFill="#bfbdbd">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="CirclePlay" layoutX="793.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="395.0" visible="false">
+         <children>
+            <Circle fx:id="c1" fill="#1f93ff00" layoutX="198.0" layoutY="193.0" radius="100.0" stroke="#44a3fc" strokeLineCap="BUTT" strokeType="INSIDE" strokeWidth="20.0" style="-fx-stroke-dash-array: 500;" />
+         </children>
+      </Pane>
+      <Pane fx:id="FINDPANE" layoutX="785.0" layoutY="285.0" prefHeight="338.0" prefWidth="410.0" visible="false">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="30.0" layoutY="98.0" prefHeight="38.0" prefWidth="350.0" promptText="등록한 이메일을 입력하세요" style="-fx-background-color: transparent; -fx-border-color: #44a3fc; -fx-border-width: 0px 0px 1px 0px; -fx-font-size: 1.5em;" />
+            <Button fx:id="btnFINDENTER" layoutX="223.0" layoutY="203.0" mnemonicParsing="false" onAction="#FindEnter" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: #44a3fc; -fx-background-radius: 10px; -fx-font-size: 1.5em;" text="찾기" textFill="WHITE" />
+            <Label fx:id="FINDLABEL" alignment="CENTER" layoutX="30.0" layoutY="150.0" prefHeight="39.0" prefWidth="350.0" style="-fx-font-size: 1.5em;" textFill="RED" />
+            <Button fx:id="btnFINDBEFORE" layoutX="63.0" layoutY="203.0" mnemonicParsing="false" onAction="#FINDBEFORE" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: #44a3fc; -fx-background-radius: 10px; -fx-font-size: 1.5em;" text="이전" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="MEMBERPANE" layoutX="802.0" layoutY="120.0" prefHeight="561.0" prefWidth="378.0" visible="false">
+         <children>
+            <TextField fx:id="NEWUSERNAME" layoutX="45.0" layoutY="190.0" prefHeight="37.0" prefWidth="310.0" promptText="아이디 입력" style="-fx-font-size: 1.5em;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <PasswordField fx:id="NEWPASSWORD" layoutX="45.0" layoutY="245.0" prefHeight="38.0" prefWidth="310.0" promptText="비밀번호 입력" style="-fx-font-size: 1.5em;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></PasswordField>
+            <TextField fx:id="NEWNAME" layoutX="45.0" layoutY="300.0" prefHeight="38.0" prefWidth="310.0" promptText="닉네임 입력" style="-fx-font-size: 1.5em;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="NEWMAIL" layoutX="45.0" layoutY="355.0" prefHeight="38.0" prefWidth="310.0" promptText="e-mail 입력" style="-fx-font-size: 1.5em;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Button fx:id="btnConfirm" layoutX="215.0" layoutY="462.0" mnemonicParsing="false" onAction="#MembershipEnter" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #44a3fc; -fx-background-radius: 10px; -fx-font-size: 1.5em;" text="확인" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="NewMessage" alignment="CENTER" layoutX="45.0" layoutY="409.0" prefHeight="31.0" prefWidth="310.0" style="-fx-font-size: 1.5em;" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="btnBefore" layoutX="45.0" layoutY="462.0" mnemonicParsing="false" onAction="#MembershipBefore" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #44a3fc; -fx-background-radius: 10px; -fx-font-size: 1.5em;" text="이전" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="FOUNDPANE" layoutX="771.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="437.0" visible="false">
+         <children>
+            <Text fx:id="infoPW" layoutX="45.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="비밀번호   : " wrappingWidth="131.909423828125">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="infoID" layoutX="45.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="아이디      :" wrappingWidth="124.70941162109375">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnFOUNDCORRECT" graphicTextGap="10.0" layoutX="146.0" layoutY="291.0" mnemonicParsing="false" onAction="#FOUNDCORRECT" prefHeight="38.0" prefWidth="125.0" style="-fx-background-color: #44a3fc; -fx-background-radius: 5px; -fx-font-size: 1.5em;" text="확인" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="FOUNDID" layoutX="192.0" layoutY="94.0" prefHeight="29.0" prefWidth="200.0" text="Label">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="FOUNDPS" layoutX="192.0" layoutY="150.0" prefHeight="29.0" prefWidth="200.0" text="Label">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="roomWrap" layoutX="798.0" layoutY="293.0" prefHeight="338.0" prefWidth="383.0" visible="false">
+         <children>
+            <Button fx:id="makeRoom" layoutY="61.0" mnemonicParsing="false" onAction="#ConvertScreen" prefHeight="67.0" prefWidth="383.0" style="-fx-font-size: 3em; -fx-background-radius: 10px;" text="방 만들기" textFill="WHITE" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="enterRoom" layoutY="95.0" mnemonicParsing="false" onAction="#ConvertScreen" prefHeight="67.0" prefWidth="383.0" style="-fx-font-size: 3em; -fx-background-radius: 10px;" text="게임 시작하기" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

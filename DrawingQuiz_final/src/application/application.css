@@ -1,0 +1,134 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*씬빌더 말고 css에서 해줘야 css에서 이펙트 활용이 가능함 
+ * 예를 들어 백그라운드 컬러를 씬빌더에서 지정해버리면 css에서 클릭이벤트로 
+ * 백그라운드 컬러를 바꾸는 게 작동이 안됨*/
+ #Logo{
+ 	-fx-font-family: "ImcreSoojin"; 
+ }
+ #infoID,#infoPW{
+ 	-fx-font-family: "ImcreSoojin"; 
+ }
+ #loginMessageLabel{
+ 	-fx-text-alignment: center;
+ }
+ #txtUserName,#txtPassword{
+ 	-fx-font-family: "ImcreSoojin"; 
+ }
+.button{
+	/*-fx-background-color: RGB(170,220,240);*/
+	-fx-background-color: RGB(33,150,243);
+    -fx-font-size: 10pt;
+    -fx-font-family: "ImcreSoojin"; 
+}
+/* #penBtn{-fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 20,0,0,0 );
+}
+#esrBtn{-fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 20,0,0,0 );}*/
+
+.label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "ImcreSoojin"; 
+}
+.text-field{
+	-fx-font-size: 1.5em;
+    -fx-font-family: "ImcreSoojin"; 
+}
+#chatLog{
+    -fx-font-size: 14pt;
+    -fx-font-family: "ImcreSoojin";
+    
+    -fx-faint-focus-color: transparent;
+}    
+#chatLog .scroll-bar:vertical {
+    -fx-background-color:RGB(243,243,243);
+    -fx-border-color:RGB(243,243,243);
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+#chatLog .scroll-bar:vertical .thumb{
+	-fx-background-color:gray;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;	
+}
+#chatIn {
+    -fx-font-size: 14pt;
+    -fx-font-family: "ImcreSoojin";
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color:rgba(255,0,0,0); /* here rgba (corrected) */
+}
+/*hover은 마우스를 가져다 댔을 때 */
+.button:hover {  
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 6, 0.0 , 0 , 0 );
+	-fx-background-color: RGB(30,140,230);
+}
+#penBtn:hover {  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );}
+#esrBtn:hover {  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );}
+#boomBtn:hover {  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );}
+.slider:hover {  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 4, 0.0 , 0 , 0 );
+}
+/*원래 pressed를 쓰는데 어느 외국 커뮤형님이 armed가 범용성이 좋다고 츄라이 해보래서 씀 */
+.button:armed{
+    -fx-background-color : #3c98be;
+}
+   
+.combo-box-base{
+ 	
+ }
+.combo-box-base:hover  {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+} 
+.text-area{
+    -fx-background-color: RGB(243,243,243),RGB(243,243,243);
+}
+
+.text-area .content {
+    -fx-background-color: RGB(243,243,243);
+}
+
+.text-area:focused .content {
+    -fx-background-color: RGB(243,243,243);
+}
+#btnMembership,#btnFind{
+	-fx-effect: none;
+}
+#btnMembership:hover,#btnFind:hover{
+	-fx-text-fill:darkgray;
+}
+#exitBtn:armed{
+    -fx-background-color : #3c98be;
+}
+
+#scroll{
+    -fx-font-size: 14pt;
+    -fx-font-family: "ImcreSoojin";
+	-fx-background-color: transparent;
+    -fx-faint-focus-color: transparent;
+}    
+
+#chatLog{
+    -fx-font-size: 14pt;
+    -fx-font-family: "ImcreSoojin";
+}    
+#scroll .scroll-bar:vertical {
+    -fx-background-color:RGB(243,243,243);
+    -fx-border-color:RGB(243,243,243);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+#scroll .scroll-bar:vertical .thumb{
+	-fx-background-color:gray;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;	
+}
+#scroll{
+    -fx-background-color: RGB(243,243,243),RGB(243,243,243);
+}
+
+#scroll .content {
+    -fx-background-color: RGB(243,243,243);
+}
+
+#scroll:focused .content {
+    -fx-background-color: RGB(243,243,243);
+}
