@@ -24,3 +24,7 @@
 ## 시연 영상
 - 영상이 안 보인다면 [여기로](./image/드로잉퀴즈_플레이%20영상.mp4)
 
+
+https://github.com/user-attachments/assets/fca90e3c-1c99-4690-ba8c-7af66ace0fcf
+
+
